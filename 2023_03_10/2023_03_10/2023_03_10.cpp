@@ -85,6 +85,7 @@ int main()
 
 	#pragma region 숫자맟주기
 
+	/*
 	int answer;
 	srand((unsigned int)time(NULL));
 	answer = rand() % 100 + 1;
@@ -114,9 +115,55 @@ int main()
 			break;
 		}
 	}
-	
+	*/
 
 	#pragma endregion
+
+	#pragma region 산술 문제 자동 출제
+	cout << "산수 문제를 자동으로 출제합니다." << endl;
+
+	srand((unsigned int)time(NULL));
+
+	int ques;
+	ques = rand() % 1 + 1;
+
+	int a,b;
+	a = rand() % 100 + 1;
+	b = rand() % 100 + 1;
+
+	int answer = 0;
+	int input;
+
+
+	if (ques == 1)
+	{
+		cout << a  << " + " << b << " = ";
+		answer = a + b;
+	}
+	else
+	{
+		cout << a << " - " << b << " = ";
+		answer = a - b;
+	}
+
+	while (true)
+	{
+		cin >> input;
+		if (input == answer)
+		{
+			cout << "맞았습니다.";
+			break;
+		}
+		else
+		{
+			cout << "틀렸습니다";
+			break;
+		}
+	}
+
+
+	#pragma endregion
+
 
 
 }
