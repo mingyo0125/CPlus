@@ -64,7 +64,7 @@ int main()
 
     #pragma region 해밍거리 구하기
 
-    string dnaA;
+    /*string dnaA;
     string dnaB;
     int count = 0;
 
@@ -81,10 +81,48 @@ int main()
             count++;
         }
     }
-    cout << "해밍거리는 : " << count;
+    cout << "해밍거리는 : " << count;*/
 
 
     #pragma endregion
+
+    string answer;
+    string realanswer;
+    string input;
+    int index = 0;
+
+    cout << "정답을 입력하세요" << endl;
+    cin >> realanswer;
+
+    for (int i = 0; i < realanswer.length(); i++)
+    {
+        answer.push_back('_');
+    }
+
+
+    cout << answer << endl;
+
+    cout << "글자를 입력하세요" << endl;
+    cin >> input;
+
+    while (answer != realanswer)
+    {
+        if (realanswer.find(input) != NULL)
+        {
+            index += realanswer.find(input);
+            answer[index] = input[index];
+            index = 0;
+        }
+        else
+        {
+            cout << "틀렸습니다." << endl;
+        }
+        cout << answer << endl;
+        cin >> input;
+        
+    }
+    
+
 
 
     
