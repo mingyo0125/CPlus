@@ -1,14 +1,14 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <string>
 using namespace std;
 
 int main()
 {
-	#pragma region ±¸±¸´Ü
+	#pragma region êµ¬êµ¬ë‹¨
 
 	/*
 	int input;
-	cout << "±¸±¸´Ü Áß¿¡¼­ Ãâ·ÂÇÏ°í ½ÍÀº ´ÜÀ» ÀÔ·ÂÇÏ¼¼¿ä";
+	cout << "êµ¬êµ¬ë‹¨ ì¤‘ì—ì„œ ì¶œë ¥í•˜ê³  ì‹¶ì€ ë‹¨ì„ ìž…ë ¥í•˜ì„¸ìš”";
 	cin >> input;
 
 	for (int i = 1; i <= 9; i++)
@@ -48,15 +48,15 @@ int main()
 	
 	#pragma endregion
 
-	#pragma region ÀÚÀ½¸ðÀ½
+	#pragma region ìžìŒëª¨ìŒ
 
-	
+	/*
 	string input;
 	int za = 0;
 	int mo = 0;
 	string moem;
 	
-	cout << "¿µ¹®ÀÚ¸¦ ÀÔ·ÂÇÏ°í 1À» Ä¡¼¼¿ä" << endl;
+	cout << "ì˜ë¬¸ìžë¥¼ ìž…ë ¥í•˜ê³  1ì„ ì¹˜ì„¸ìš”" << endl;
 
 	while (true)
 	{
@@ -78,14 +78,50 @@ int main()
 		}
 	}
 
-	cout << "¸ðÀ½ : " << mo;
-	cout << "ÀÚÀ½ : " << za;
-	
+	cout << "ëª¨ìŒ : " << mo;
+	cout << "ìžìŒ : " << za;
+	*/
 	#pragma endregion
+
+	#pragma region ìˆ«ìžë§Ÿì£¼ê¸°
+
+	int answer;
+	srand((unsigned int)time(NULL));
+	answer = rand() % 100 + 1;
+
+	int input = 0;
+	int count = 0;
+
+	while (true)
+	{
+		cout << "ì •ë‹µì„ ì¶”ì¸¡í•˜ì—¬ ë³´ì‹­ì‹œì˜¤ : ";
+		cin >> input;
+
+		if (input > answer)
+		{
+			cout << "ì œì‹œí•œ ì •ìˆ˜ê°€ ë†’ìŠµë‹ˆë‹¤" << endl;
+			count++;
+		}
+		else if (input < answer)
+		{
+			cout << "ì œì‹œí•œ ì •ìˆ˜ê°€ ë‚®ìŠµë‹ˆë‹¤" << endl;
+			count++;
+		}
+		else
+		{
+			count++;
+			cout << "ì¶•í•˜í•©ë‹ˆë‹¤." << "" << "ì‹œë„íšŸìˆ˜ = " << count;
+			break;
+		}
+	}
+	
+
+	#pragma endregion
+
 
 }
 
-inline int Swap(int* a, int* b) //Æ÷ÀÎÅÍ, inline(¸ÞÀÎ¿¡ Áý¾î³Ö¾îÁÜ)
+inline int Swap(int* a, int* b) //í¬ì¸í„°, inline(ë©”ì¸ì— ì§‘ì–´ë„£ì–´ì¤Œ)
 {
 	int temp = 0;
 
@@ -96,7 +132,7 @@ inline int Swap(int* a, int* b) //Æ÷ÀÎÅÍ, inline(¸ÞÀÎ¿¡ Áý¾î³Ö¾îÁÜ)
 	cout << "Swap" << endl << a << endl << b;
 }
 
-//int _Swap(int& a, int& b) //ÂüÁ¶
+//int _Swap(int& a, int& b) //ì°¸ì¡°
 //{
 //	int temp = 0;
 //
